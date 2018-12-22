@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -37,7 +38,7 @@ const appRoutes:Routes=[
   {path:'questions',component:QuestionsComponent},
   {path:'side',component:SidebarComponent},
   {path:'tuteur',component:SideMenuComponent},
-  {path:'search',component:ESearchComponent},
+  {path:'search/:id',component:ESearchComponent},
   {path:'contactUs',component:ContactUsComponent},
   {path:'espace-tuteur',component:TSpaceComponent,children:[
     { path: 'creation-cours', component:CreateCourseComponent},
@@ -76,6 +77,7 @@ const appRoutes:Routes=[
   imports: [
     
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     StarRatingModule.forRoot()
     

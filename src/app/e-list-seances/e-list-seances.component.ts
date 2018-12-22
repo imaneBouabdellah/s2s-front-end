@@ -11,13 +11,18 @@ export class EListSeancesComponent implements OnInit {
 
   constructor() { }
 seancess:Seance[]= seances;
+rating=1;
   ngOnInit() {
-    
     }
     toString( val: number){
 
       return val.toString();
     }
+    onRatingChange(rating:any){
+      this.rating = rating;
+      console.log(rating);
+    }
+    
     
 
   

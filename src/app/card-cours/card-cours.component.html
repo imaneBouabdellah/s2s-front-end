@@ -7,7 +7,7 @@
         <div class="card-desc">
             <h3>{{obj.titre}}</h3>
             <p>{{obj.tuteur.nom}} {{obj.tuteur.prenom}}</p>
-            <star-rating direction="rtl"  labelText="({{obj.note}}) {{obj.rate}}" [showHalfStars]="true" [readOnly]="true" [starType]="'svg'" [rating]="toString(obj.rate)"></star-rating>
+            <star-rating  labelText="({{obj.note}}) {{obj.rate}}" [showHalfStars]="true" [readOnly]="true" [starType]="'svg'" [rating]="toString(obj.rate)"></star-rating>
          
             <h4>Prix : {{obj.prix}} MAD</h4>
             <br/>
@@ -32,7 +32,7 @@
                         <div class="col-md-6 product_content">
                             <h4>Id Cours: <span>{{obj.idCours}}</span></h4>
                             <div class="rating">
-                            <star-rating direction="rtl"  labelText="({{obj.note}}) {{obj.rate}}" [showHalfStars]="true" [readOnly]="true" [starType]="'svg'" [rating]="toString(obj.rate)"></star-rating>
+                            <star-rating   labelText="({{obj.note}}) {{obj.rate}}" [showHalfStars]="true" [readOnly]="true" [starType]="'svg'" [rating]="toString(obj.rate)"></star-rating>
          
                             </div>
                             <p>{{obj.detailsCours}} </p>
@@ -85,7 +85,7 @@
                                                  
                                                     <ng-template #elsecondition>
                                                         
-                                                            <div class="" data-toggle="buttons">
+                                                           <div class="" data-toggle="buttons">
                                                                     <label class="btn btn-lg btn-success ">
                                                                             <input type="radio" name="options" id="option1" autocomplete="off" checked>
                                                                             <i class="fa fa-group"></i> Groupe
@@ -95,7 +95,7 @@
                                                                         <i class="fa fa-male"></i> Individuel
                                                                     </label>
                                                                         
-                                                                </div>
+                                                            </div>
 
                                                     </ng-template>  
                                                       

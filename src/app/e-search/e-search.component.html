@@ -17,20 +17,25 @@
 						<div class="table-container">
 							<table class="table table-filter">
 								<tbody>
-									<tr class="cours">
+									<tr class="cours" *ngFor="let obj of cours" >
 										
 										<td>
 											<div class="media">
 												<a href="#" class="pull-left">
-													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+													<img src={{obj.photo}} class="media-photo">
 												</a>
 												<div class="media-body">
-													<span class="media-meta pull-right">Febrero 13, 2016</span>
+													<span class="media-meta pull-right"><star-rating  labelText="({{obj.note}}) {{obj.rate}}" [showHalfStars]="true" [readOnly]="true" [starType]="'svg'" [rating]="toString(obj.rate)"></star-rating></span>
 													<h4 class="title">
-														Lorem Impsum
-														<span class="pull-right cours">(cours)</span>
+														{{obj.titre}}
+														
 													</h4>
-													<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+													<p class="summary">
+														Par {{obj.tuteur.nom}} {{obj.tuteur.prenom}} 
+														<br/>
+														<span style="font-size: 12px;margin:0;padding:10px 5px;line-height: 0;">Prix : {{obj.prix}} MAD</span>
+												
+													</p>
 												</div>
 											</div>
 										</td>

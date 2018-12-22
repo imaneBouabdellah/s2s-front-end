@@ -62,23 +62,32 @@
 
                                      
                                         <div class="modal-dialog">
-                                                <div class="modal-content">
+                                                <div class="modal-content "style="padding-left: 2%;padding-right: 2%;">
                                                         <div class="modal-header">
                                                         <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
                                                         <h3 class="modal-title">Score</h3>
                                                         </div>
                                                         <div class="modal-body">
                                                         <div class="row">
-                                                        
-                                                                <div class="rating">
-                                                                <star-rating  size="large" speed="slow" [showHalfStars]="true"  [starType]="'svg'" [rating]="1"></star-rating>
-                                                
+                                                    
+                                                                <div class="col-sm-8">
+                                                                <star-rating  size="large" speed="slow"  [starType]="'svg'" [rating]="1" (ratingChange)="onRatingChange($event)"></star-rating> 
+                                                               </div> 
+                                                               <div class="col-sm-4">
+                                                               <label class="label-value" > {{rating.rating}} </label>
                                                                 </div>
-                                                                <p>Commentaire </p>
-                                                                <textarea class="form-control" rows="8" cols="50" name="Message" placeholder="Message..."></textarea>
-                                                                <button class="btn btn-lg btn-primary btn-block" 
-                                                                style="background-color: rgb(122, 175, 22);border-color: rgb(122, 175, 22) " type="submit">
-                                                                        <b>Envoyer</b> </button>
+                                                                <br/><br/>
+                                                                <div class="col">
+                                                                        <p id="commentaire">Commentaire </p>
+                                                                        <textarea class="form-control" rows="8" cols="50" name="Message" placeholder="Message..."></textarea>
+                                                                       <br/>
+                                                                        <button class="btn btn-lg btn-primary btn-block" 
+                                                                        style="background-color: rgb(122, 175, 22);border-color: rgb(122, 175, 22) " type="submit">
+                                                                                <b>Envoyer</b> 
+                                                                        </button>
+                                                                </div>
+                                                                
+                                                                
                                                         
                                                                 
                                                                 
